@@ -1,11 +1,11 @@
 import requests
 import pandas as pd
 
-api_key = ''
-df = pd.read_excel('city_buildings.xlsx')
-
 # The base URL of the inverse geocoding API
 regeo_url = "https://restapi.amap.com/v3/geocode/regeo"
+
+api_key = ''
+df = pd.read_excel('city_buildings.xlsx')
 
 # Check if the DataFrame already has an 'area' column, if not, add it
 if 'AOI点面积' not in df.columns:
